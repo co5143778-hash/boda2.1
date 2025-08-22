@@ -254,9 +254,28 @@ function updateCarousel() {
         // Mover una imagen a la vez (8.333% del ancho total)
         const translateX = -(currentSlide * 8.333);
         track.style.transform = `translateX(${translateX}%)`;
+        console.log('Carousel moved to slide:', currentSlide, 'translateX:', translateX);
     }
     updateSlideCounter();
     markCenterCarouselItem();
+}
+
+function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+    } else {
+        currentSlide = 0;
+    }
+    updateCarousel();
+}
+
+function previousSlide() {
+    if (currentSlide > 0) {
+        currentSlide--;
+    } else {
+        currentSlide = totalSlides - 1;
+    }
+    updateCarousel();
 }
 
 function updateSlideCounter() {
