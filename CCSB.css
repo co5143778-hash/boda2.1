@@ -496,13 +496,18 @@ body {
     display: inline-flex; 
     align-items: center; 
     gap: 0.75rem; 
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 .hero-text .date::before, .hero-text .date::after {
     content: ""; display: block; height: 1px; width: 60px; background: #fff;
 }
 /* Line below names */
-.hero-text .names { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.hero-text .names { 
+    position: relative; 
+    display: inline-block; 
+    padding-bottom: 0.5rem; 
+    margin-bottom: 1rem;
+}
 .hero-text .names::after {
     content: ""; position: absolute; left: 10%; right: 10%; bottom: 0; height: 0.5px; background: #fff;
 }
@@ -1112,9 +1117,9 @@ button[class*="carousel"] {
 }
 
 /* Tweak hero layout spacing */
-.hero-text .date { margin-bottom: 0.5rem; }
-.hero-text .names { margin-bottom: 1.25rem; }
-.quote { margin-top: 0.25rem; padding-top: 0.25rem; }
+.hero-text .date { margin-bottom: 2rem; }
+.hero-text .names { margin-bottom: 1rem; }
+.quote { margin-top: 1.5rem; padding-top: 0.25rem; }
 
 /* Bowtie subtle animation */
 .bowtie-icon svg {
