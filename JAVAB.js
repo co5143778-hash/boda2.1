@@ -251,8 +251,8 @@ function initializeCarousel() {
 function updateCarousel() {
     const track = document.getElementById('carouselTrack');
     if (track) {
-        // Mover una imagen a la vez (33.333% del ancho total)
-        const translateX = -(currentSlide * 33.333);
+        // Mover una imagen a la vez (8.333% del ancho total)
+        const translateX = -(currentSlide * 8.333);
         track.style.transform = `translateX(${translateX}%)`;
         console.log('Carousel moved to slide:', currentSlide, 'translateX:', translateX);
     }

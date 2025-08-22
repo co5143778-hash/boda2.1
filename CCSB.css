@@ -650,6 +650,7 @@ body {
 
 .carousel-track-container {
     overflow: hidden;
+    width: 100%;
 }
 
 .carousel-track {
@@ -657,12 +658,12 @@ body {
     transition: transform 0.5s ease-in-out;
     gap: 1rem;
     padding: 1rem;
-    width: 400%;
+    width: 1200%;
 }
 
 /* Cada tarjeta del carrusel */
 .carousel-item {
-    flex: 0 0 33.333%;
+    flex: 0 0 8.333%;
     height: 300px;
     border-radius: 0;
     overflow: hidden;
@@ -728,20 +729,20 @@ body {
 /* ============================= */
 @media (max-width: 1024px) {
     .carousel-track {
-        width: 400%;
+        width: 1200%;
     }
     .carousel-item {
-        flex: 0 0 33.333%;
+        flex: 0 0 8.333%;
         height: 320px;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-track {
-        width: 400%;
+        width: 1200%;
     }
     .carousel-item {
-        flex: 0 0 33.333%;
+        flex: 0 0 8.333%;
         height: 280px;
     }
 
