@@ -1141,10 +1141,10 @@ button[class*="carousel"] {
 .framed-photo:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 
 /* Ajuste de separación entre ítems para que queden más juntas sin cambiar la sección */
-.carousel-track { gap: 0.5rem; padding: 0.25rem; }
+.carousel-track { gap: 0.8rem; padding: 0.4rem; }
 
 /* Mantener 3 en desktop sin cambiar altura de sección */
-.carousel-item { flex: 0 0 calc(33.333% - 0.333rem); }
+.carousel-item { flex: 0 0 calc(33.333% - 0.533rem); }
 
 /* Imagen polaroid rectangular más grande dentro del item, sin tocar altura de .carousel-item */
 .framed-photo {
@@ -1155,7 +1155,7 @@ button[class*="carousel"] {
 }
 
 @media (max-width: 1024px) {
-    .carousel-item { flex: 0 0 calc(50% - 0.25rem); }
+    .carousel-item { flex: 0 0 calc(50% - 0.4rem); }
 }
 
 @media (max-width: 768px) {
@@ -1163,8 +1163,8 @@ button[class*="carousel"] {
     .framed-photo { width: 98% !important; }
 }
 
-/* Imágenes casi pegadas */
-.carousel-track { gap: 0.25rem; padding: 0; }
+/* Imágenes con separación ligera */
+.carousel-track { gap: 0.8rem; padding: 0.4rem; }
 
 /* Efecto “sobresalir” del centro solo en desktop */
 @media (min-width: 1025px) {
