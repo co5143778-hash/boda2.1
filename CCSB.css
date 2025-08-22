@@ -656,15 +656,16 @@ body {
     transition: transform 0.5s ease-in-out;
     gap: 1rem;
     padding: 0.5rem;
+    width: calc(400% + 3rem); /* Ancho para 12 imágenes con gaps */
 }
-
 
 /* Cada tarjeta del carrusel */
 .carousel-item {
-    flex: 0 0 calc(33.33% - 1rem); /* 3 imágenes visibles en desktop */
+    flex: 0 0 calc(25% - 0.75rem); /* 4 imágenes visibles en desktop */
     height: 400px; /* más alto */
     border-radius: 0; /* sin bordes ni esquinas redondeadas */
     overflow: hidden;
+    min-width: 0; /* Permite que las imágenes se compriman */
 }
 
 /* Imagen dentro de la tarjeta */
@@ -717,6 +718,9 @@ body {
 /*  Responsive                   */
 /* ============================= */
 @media (max-width: 1024px) {
+    .carousel-track {
+        width: calc(600% + 5rem); /* Ancho para 12 imágenes con gaps en tablet */
+    }
     .carousel-item {
         flex: 0 0 calc(50% - 1rem); /* 2 imágenes en tablet */
         height: 320px;
@@ -724,6 +728,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .carousel-track {
+        width: calc(1200% + 11rem); /* Ancho para 12 imágenes con gaps en móvil */
+    }
     .carousel-item {
         flex: 0 0 100%; /* 1 imagen en móvil */
         height: 280px;
