@@ -580,6 +580,7 @@ body {
     height: 100%;
     object-fit: cover; /* Recorta la imagen sin deformarla */
     display: block;
+    transform: scale(1.1); /* Hace las imágenes un 10% más grandes */
 }
 
 /* Botones de navegación */
