@@ -251,15 +251,8 @@ function initializeCarousel() {
 function updateCarousel() {
     const track = document.getElementById('carouselTrack');
     if (track) {
-        // Calcular el desplazamiento basado en el número de imágenes visibles
-        let itemsPerView = 4; // desktop
-        if (window.innerWidth <= 768) {
-            itemsPerView = 1; // móvil
-        } else if (window.innerWidth <= 1024) {
-            itemsPerView = 2; // tablet
-        }
-        
-        const translateX = -(currentSlide * (100 / itemsPerView));
+        // Mover una imagen a la vez (8.333% del ancho total)
+        const translateX = -(currentSlide * 8.333);
         track.style.transform = `translateX(${translateX}%)`;
     }
     updateSlideCounter();
