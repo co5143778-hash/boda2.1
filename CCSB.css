@@ -512,14 +512,14 @@ body {
 .quote::after { content: "”"; bottom: -1.75rem; font-size: 2rem; }
 /* Framed carousel images */
 .framed-photo {
-    border: 10px solid #999999;
-    border-bottom: 40px solid #999999; /* pie más ancho */
+    border: 6px solid #999999;
+    border-bottom: 25px solid #999999; /* pie más delgado */
     border-radius: 0; /* sin bordes redondeados */
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     display: block;
-    margin: 10px auto 40px;
+    margin: 10px auto 25px;
     box-sizing: border-box;
-    width: 98% !important; /* un poco más grande dentro del item */
+    width: 100% !important; /* más ancho */
     max-width: none;
     height: auto;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -1147,10 +1147,10 @@ button[class*="carousel"] {
 
 /* Imagen polaroid rectangular más grande dentro del item, sin tocar altura de .carousel-item */
 .framed-photo {
-    width: 95% !important;        /* más grande dentro del item */
+    width: 100% !important;       /* más ancho */
     height: auto;                 /* respeta proporción */
     max-width: none;              /* permite ocupar más ancho del item */
-    border-radius: 6px;           /* leve para esquinas del marco */
+    border-radius: 0;             /* sin bordes redondeados */
 }
 
 @media (max-width: 1024px) {
@@ -1159,7 +1159,7 @@ button[class*="carousel"] {
 
 @media (max-width: 768px) {
     .carousel-item { flex: 0 0 100%; }
-    .framed-photo { width: 92% !important; }
+    .framed-photo { width: 98% !important; }
 }
 
 /* Imágenes casi pegadas */
