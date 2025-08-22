@@ -492,19 +492,27 @@ body {
     text-align: center;
 }
 /* Date separators left and right */
-.hero-text .date { display: inline-flex; align-items: center; gap: 0.75rem; }
+.hero-text .date { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.75rem; 
+    margin-bottom: 1.5rem;
+}
 .hero-text .date::before, .hero-text .date::after {
     content: ""; display: block; height: 1px; width: 60px; background: #fff;
 }
 /* Line below names */
 .hero-text .names { position: relative; display: inline-block; padding-bottom: 0.5rem; }
 .hero-text .names::after {
-    content: ""; position: absolute; left: 10%; right: 10%; bottom: 0; height: 1px; background: #fff;
+    content: ""; position: absolute; left: 10%; right: 10%; bottom: 0; height: 0.5px; background: #fff;
 }
 /* Gold ampersand */
 .hero-text .ampersand { color: #c79816; }
 /* Decorative gold quotes above and below */
-.quote { position: relative; }
+.quote { 
+    position: relative; 
+    margin-top: 1.5rem;
+}
 .quote::before, .quote::after {
     position: absolute; left: 50%; transform: translateX(-50%); color: #c79816; font-family: 'Playfair Display', serif;
 }
