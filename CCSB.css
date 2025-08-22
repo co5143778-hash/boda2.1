@@ -662,11 +662,19 @@ body {
 
 /* Cada tarjeta del carrusel */
 .carousel-item {
-    flex: 0 0 25%;
+    flex: 0 0 33.333%;
     height: 300px;
     border-radius: 0;
     overflow: hidden;
     min-width: 0;
+    transition: all 0.3s ease;
+}
+
+/* Imagen central destacada */
+.carousel-item.is-center {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* Imagen dentro de la tarjeta */
@@ -720,20 +728,20 @@ body {
 /* ============================= */
 @media (max-width: 1024px) {
     .carousel-track {
-        width: 600%;
+        width: 400%;
     }
     .carousel-item {
-        flex: 0 0 16.666%;
+        flex: 0 0 33.333%;
         height: 320px;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-track {
-        width: 1200%;
+        width: 400%;
     }
     .carousel-item {
-        flex: 0 0 8.333%;
+        flex: 0 0 33.333%;
         height: 280px;
     }
 

@@ -251,8 +251,8 @@ function initializeCarousel() {
 function updateCarousel() {
     const track = document.getElementById('carouselTrack');
     if (track) {
-        // Mover una imagen a la vez (25% del ancho total)
-        const translateX = -(currentSlide * 25);
+        // Mover una imagen a la vez (33.333% del ancho total)
+        const translateX = -(currentSlide * 33.333);
         track.style.transform = `translateX(${translateX}%)`;
         console.log('Carousel moved to slide:', currentSlide, 'translateX:', translateX);
     }
@@ -287,14 +287,15 @@ function updateSlideCounter() {
 
 // Mark center carousel item on desktop
 function markCenterCarouselItem() {
-    if (window.innerWidth <= 1024) return; // only desktop
     const track = document.getElementById('carouselTrack');
     if (!track) return;
     const items = Array.from(track.querySelectorAll('.carousel-item'));
     if (!items.length) return;
+    
     // Remove previous center marks
     items.forEach(it => it.classList.remove('is-center'));
-    // Heuristic: center visible index is currentSlide + 1 in 3-up layout
+    
+    // Mark the center item (currentSlide + 1 for 3-up layout)
     const centerIndex = (currentSlide + 1) % items.length;
     items[centerIndex].classList.add('is-center');
 }
