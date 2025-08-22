@@ -223,7 +223,7 @@ body {
 .gifts-section,
 .rsvp-section {
     padding: 4rem 1rem;
-    background: hsl(var(--primary));
+    background: #000000;
     box-shadow: 0 8px 24px -8px rgba(0,0,0,0.5);
     color: hsl(var(--foreground));
     width: 100%;
